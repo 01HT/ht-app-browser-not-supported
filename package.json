@@ -1,0 +1,8 @@
+{
+  "name": "@01ht/ht-app-browser-not-supported",
+  "version": "1.0.0",
+  "main": "ht-app-browser-not-supported.js",
+  "repository": "01ht/ht-app-browser-not-supported",
+  "author": "01HT Ltd",
+  "license": "UNLICENSED"
+}
