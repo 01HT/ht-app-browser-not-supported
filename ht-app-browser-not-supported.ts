@@ -1,5 +1,5 @@
 "use strict";
-function browserNotSupported(appName, ico64, ico32, svg) {
+function browserNotSupported(appName, cloudinaryURL, ico64, ico32, svg) {
   return `
 <!doctype html>
 <html lang="en">
@@ -11,7 +11,6 @@ function browserNotSupported(appName, ico64, ico32, svg) {
         <meta name="description" content="Ваш браузер не поддерживается приложением ${appName}.">
         <link rel="icon" href="${ico64}">
         <link rel="shortcut icon" sizes="32x32" href="${ico32}">
-        <link rel="preconnect" href="https://res.cloudinary.com">
     </head>
     <body>
         <style>
@@ -95,22 +94,22 @@ function browserNotSupported(appName, ico64, ico32, svg) {
             <div class="block">Поддерживаемые браузеры</div>
             <div id="supported">
                 <div class="browser">
-                    <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/chrome/logo.png" alt="Chrome browser">
+                    <img src="${cloudinaryURL}/image/upload/logos/chrome/logo.png" alt="Chrome browser">
                     <div class="name">Chrome</div>
                     <div class="version">> 61</div>
                 </div>
                 <div class="browser">
-                    <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/firefox/logo.png" alt="Firefox browser">
+                    <img src="${cloudinaryURL}/image/upload/logos/firefox/logo.png" alt="Firefox browser">
                     <div class="name">Firefox</div>
                     <div class="version">> 63</div>
                 </div>
                 <div class="browser">
-                    <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/safari/logo.png" alt="Safari browser">
+                    <img src="${cloudinaryURL}/image/upload/logos/safari/logo.png" alt="Safari browser">
                     <div class="name">Safari</div>
                     <div class="version">> 11</div>
                 </div>
                 <div class="browser">
-                    <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/opera/logo.png" alt="Opera browser">
+                    <img src="${cloudinaryURL}/image/upload/logos/opera/logo.png" alt="Opera browser">
                     <div class="name">Opera</div>
                     <div class="version">> 48</div>
                 </div>

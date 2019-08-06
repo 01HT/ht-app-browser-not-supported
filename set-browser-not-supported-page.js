@@ -8,8 +8,7 @@ document.head.innerHTML = `<meta charset="utf-8">
         <link rel="icon" href="${window.appConfig.logo.ico64}">
         <link rel="shortcut icon" sizes="32x32" href="${
           window.appConfig.logo.ico32
-        }">
-        <link rel="preconnect" href="https://res.cloudinary.com">`;
+        }">`;
 document.body.innerHTML = `<style>
             body {
                 font-family: Roboto, sans-serif;
@@ -93,22 +92,30 @@ document.body.innerHTML = `<style>
     <div class="block">Поддерживаемые браузеры</div>
     <div id="supported">
         <div class="browser">
-            <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/chrome/logo.png" alt="Chrome browser">
+            <img src="${
+              window.appConfig.cloudinary.url
+            }/image/upload/logos/chrome/logo.png" alt="Chrome browser">
             <div class="name">Chrome</div>
             <div class="version">> 61</div>
         </div>
         <div class="browser">
-            <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/firefox/logo.png" alt="Firefox browser">
+            <img src="${
+              window.appConfig.cloudinary.url
+            }/image/upload/logos/firefox/logo.png" alt="Firefox browser">
             <div class="name">Firefox</div>
             <div class="version">> 63</div>
         </div>
         <div class="browser">
-            <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/safari/logo.png" alt="Safari browser">
+            <img src="${
+              window.appConfig.cloudinary.url
+            }/image/upload/logos/safari/logo.png" alt="Safari browser">
             <div class="name">Safari</div>
             <div class="version">> 11</div>
         </div>
         <div class="browser">
-            <img src="https://res.cloudinary.com/cdn-01ht/image/upload/logos/opera/logo.png" alt="Opera browser">
+            <img src="${
+              window.appConfig.cloudinary.url
+            }/image/upload/logos/opera/logo.png" alt="Opera browser">
             <div class="name">Opera</div>
             <div class="version">> 48</div>
         </div>
