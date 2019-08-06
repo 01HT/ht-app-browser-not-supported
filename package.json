@@ -4,5 +4,14 @@
   "main": "ht-app-browser-not-supported.js",
   "repository": "01ht/ht-app-browser-not-supported",
   "author": "01HT Ltd",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/tslint -p tslint.json",
+    "build": "./node_modules/.bin/tsc",
+    "clear": "if exist lib ( rmdir /s/q lib )"
+  }
 }

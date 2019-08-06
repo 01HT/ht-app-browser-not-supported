@@ -1,7 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function browserNotSupported(appName, ico64, ico32, svg) {
-    return `
+  return `
 <!doctype html>
 <html lang="en">
     <head>
@@ -127,5 +126,5 @@ function browserNotSupported(appName, ico64, ico32, svg) {
     </body>
 </html>`;
 }
-exports.browserNotSupported = browserNotSupported;
-//# sourceMappingURL=ht-app-browser-not-supported.js.map
+
+export { browserNotSupported };
