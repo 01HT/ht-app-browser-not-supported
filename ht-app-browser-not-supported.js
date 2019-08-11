@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function browserNotSupported(appName, cloudinaryURL, ico64, ico32, svg) {
+function browserNotSupported(params) {
     return `
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="generator" content="${appName}">
+        <meta name="generator" content="${params.appName}">
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-        <title>${appName} не поддерживает ваш браузер</title>
-        <meta name="description" content="Ваш браузер не поддерживается приложением ${appName}.">
-        <link rel="icon" href="${ico64}">
-        <link rel="shortcut icon" sizes="32x32" href="${ico32}">
+        <title>${params.appName} не поддерживает ваш браузер</title>
+        <meta name="description" content="Ваш браузер не поддерживается приложением ${params.appName}.">
+        <link rel="icon" href="${params.ico64}">
+        <link rel="shortcut icon" sizes="32x32" href="${params.ico32}">
     </head>
     <body>
         <style>
@@ -90,30 +90,37 @@ function browserNotSupported(appName, cloudinaryURL, ico64, ico32, svg) {
             }
         </style>
         <div id="container">
-            <img id="logo" src="${svg}" alt="${appName} logo">
+            <img id="logo" src="${params.svg}" alt="${params.appName} logo">
             <h1>Ваш браузер не поддерживается</h1>
             <div class="block">Поддерживаемые браузеры</div>
             <div id="supported">
                 <div class="browser">
-                    <img src="${cloudinaryURL}/image/upload/logos/chrome/logo.png" alt="Chrome browser">
+                    <img src="${params.cloudinaryURL}/image/upload/logos/chrome/logo.png" alt="Chrome browser">
                     <div class="name">Chrome</div>
                     <div class="version">> 61</div>
                 </div>
                 <div class="browser">
-                    <img src="${cloudinaryURL}/image/upload/logos/firefox/logo.png" alt="Firefox browser">
+                    <img src="${params.cloudinaryURL}/image/upload/logos/firefox/logo.png" alt="Firefox browser">
                     <div class="name">Firefox</div>
                     <div class="version">> 63</div>
                 </div>
                 <div class="browser">
-                    <img src="${cloudinaryURL}/image/upload/logos/safari/logo.png" alt="Safari browser">
+                    <img src="${params.cloudinaryURL}/image/upload/logos/safari/logo.png" alt="Safari browser">
                     <div class="name">Safari</div>
                     <div class="version">> 11</div>
                 </div>
                 <div class="browser">
-                    <img src="${cloudinaryURL}/image/upload/logos/opera/logo.png" alt="Opera browser">
+                    <img src="${params.cloudinaryURL}/image/upload/logos/opera/logo.png" alt="Opera browser">
                     <div class="name">Opera</div>
                     <div class="version">> 48</div>
                 </div>
+                ${params.ie11_support
+        ? `<div class="browser">
+                    <img src="${params.cloudinaryURL}/image/upload/logos/ie11/logo.png" alt="IE11 browser">
+                    <div class="name">Explorer</div>
+                    <div class="version">> 11</div>
+                </div>`
+        : ``}
             </div>
             <div class="block">И другие браузеры, которые поддерживают спецификации:</div>
             <div id="spec">
