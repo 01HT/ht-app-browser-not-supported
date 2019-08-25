@@ -8,8 +8,8 @@ function browserNotSupported(params) {
         <meta charset="utf-8">
         <meta name="generator" content="${params.appName}">
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-        <title>${params.appName} не поддерживает ваш браузер</title>
-        <meta name="description" content="Ваш браузер не поддерживается приложением ${params.appName}.">
+        <title>Текущий браузер не поддерживается</title>
+        <meta name="description" content="Текущий браузер не поддерживается приложением ${params.appName}.">
         <link rel="icon" href="${params.ico64}">
         <link rel="shortcut icon" sizes="32x32" href="${params.ico32}">
     </head>
@@ -91,7 +91,7 @@ function browserNotSupported(params) {
         </style>
         <div id="container">
             <img id="logo" src="${params.svg}" alt="${params.appName} logo">
-            <h1>Ваш браузер не поддерживается</h1>
+            <h1>Текущий браузер не поддерживается</h1>
             <div class="block">Поддерживаемые браузеры</div>
             <div id="supported">
                 <div class="browser">
@@ -114,13 +114,6 @@ function browserNotSupported(params) {
                     <div class="name">Opera</div>
                     <div class="version">> 48</div>
                 </div>
-                ${params.ie11_support
-        ? `<div class="browser">
-                    <img src="${params.cloudinaryURL}/image/upload/logos/ie11/logo.png" alt="IE11 browser">
-                    <div class="name">Explorer</div>
-                    <div class="version">> 11</div>
-                </div>`
-        : ``}
             </div>
             <div class="block">И другие браузеры, которые поддерживают спецификации:</div>
             <div id="spec">
