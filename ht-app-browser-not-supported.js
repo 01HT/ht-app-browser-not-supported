@@ -90,7 +90,7 @@ function browserNotSupported(params) {
             }
         </style>
         <div id="container">
-            <img id="logo" src="${params.svg}" alt="${params.appName} logo">
+            <img id="logo" src="${params.cloudinaryURL}/image/upload/apps/common/browser-not-supported/browser-not-supported.svg" alt="Браузер не поддерживается">
             <h1>Текущий браузер не поддерживается</h1>
             <div class="block">Поддерживаемые браузеры</div>
             <div id="supported">
